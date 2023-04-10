@@ -1,0 +1,37 @@
+ <div class="col-md-12">
+      {{!-- Go to Add --}}
+        
+            <a  class="btn btn-success" type="button" href="/api/user_add">Add User</a>
+       
+    </div>
+        <h1>Account</h1>
+        <table class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th>FULL NAME</th>
+              <th>EMAIL</th>
+              <th>PASSWORD</th>
+              <th>ROLE</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each users}}
+            <tr>
+              <td> {{this.fullName}}</td>
+              <td> {{this.email}}</td>
+              <td> {{this.passWord}} </td>
+              <td> {{this.role}}</td>
+              <td>
+                 <a type="button" class="btn btn-info" href="/api/user_update/{{this._id}}"> Update </a> 
+          <a onclick="return confirm('Bạn có chắc chắn muốn xóa acount này không?')" type="button" class="btn btn-danger" href="/api/user_delete/{{this._id}}"> Xóa </a> 
+               
+              </td>
+            </tr>
+            <!-- The Modal -->
+      
+            {{/each}}
+          </tbody>
+        </table>
+
+      </div>

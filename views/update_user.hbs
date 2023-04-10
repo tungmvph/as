@@ -1,0 +1,40 @@
+<div class="card col-md-6 container">
+        <div class="card-header text-center">
+          Update Account
+        </div>
+        <div class="card-body">
+          <form method="POST" action="/api/user_update">
+          <input type="hidden" name="id" value="{{user._id}}">
+          <div class="row mb-3">
+            <a class="btn btn-dark col-auto me-auto" href="/api/users"><i class="fa-solid fa-arrow-left"></i>
+                Back</a>
+            <code class="mx-auto col-auto">{{notify}}</code>
+        </div>
+
+            <div class="form-group">
+              <label class="form-label">Họ Và Tên</label>
+              <input type="text" class="form-control" name="fullName" value="{{user.fullName}}" >
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="text" class="form-control" name="email" value="{{user.email}}" >
+            </div>
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" name="passWord" value="{{user.passWord}}" >
+            </div>
+            <div class="form-group">
+              <label class="form-label">ROLE</label>
+              <select class="form-control" name="role" value="{{user.role}}">
+                <option>ADMIN</option>
+                <option>USER</option>
+              </select>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary">Update Account</button>
+          </form>
+        </div>
+      </div>
+
+
+      

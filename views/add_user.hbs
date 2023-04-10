@@ -1,0 +1,39 @@
+<div class="card col-md-6 container ">
+        <div class="card-header text-center">
+          Thêm Account mới
+        </div>
+        <div class="card-body">
+          <form method="POST" action="/api/user_add">
+          <div class="row mb-3">
+            <a class="btn btn-dark col-auto me-auto" href="/api/users"><i class="fa-solid fa-arrow-left"></i>
+                Back</a>
+            <code class="mx-auto col-auto">{{notify}}</code>
+        </div>
+
+            <div class="form-group">
+              <label for="productName">Họ Và Tên</label>
+              <input type="text" required class="form-control" name="fullName" placeholder="Nhập họ và tên">
+            </div>
+            <div class="form-group">
+              <label for="productPrice">Email</label>
+              <input type="text" required class="form-control" name="email"  placeholder="Nhập Email">
+            </div>
+            <div class="form-group">
+              <label for="productColor">Password</label>
+              <input type="password" required class="form-control" name="passWord" placeholder="Nhập pass">
+            </div>
+            <div class="form-group">
+              <label for="productType">ROLE</label>
+              <select class="form-control" name="role" >
+                <option>ADMIN</option>
+                <option>USER</option>
+              </select>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary">Thêm Account</button>
+          </form>
+        </div>
+      </div>
+
+
+      

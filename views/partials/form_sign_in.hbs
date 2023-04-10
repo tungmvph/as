@@ -1,0 +1,31 @@
+<div class="container w-50 p-5 my-5 shadow">
+
+  {{! Title }}
+  <h1 class="text-center">ASSIGNMENT</h1>
+  {{! Form }}
+
+        <form id="login-form" method="post" action="/api/signin">
+          <div class="form-group text-center mb-5">
+            <h3>Sign in</h3>
+          </div>
+          <div class="form-group">
+            <label for="username">Tên đăng nhập</label>
+            <input type="text" name="email" class="form-control" id="username">
+          </div>
+          <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" name="password" class="form-control" id="password">
+            <div> <a href="/api/signup"> Đăng Ký Ngay ?</a> </div>
+          </div>
+
+          <div class="form-group text-center mb-5">
+            <button type="submit" class="btn btn-primary" id="login-button">Đăng nhập</button>
+          </div>
+        </form>
+  {{! Notify }}
+  <div class="row">
+    <code>{{notify}}</code>
+  </div>
+  
+
+</div>

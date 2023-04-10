@@ -1,0 +1,41 @@
+ <div class="col-md-12">
+
+ <a type="button"  class="btn btn-success" href="/api/product_add"> Add sp</a>
+  <h1>Products</h1>
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>TYPE</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Ma</th>
+        <th>Ten kh</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each products}}
+      <tr>
+        <td> {{this.name}}</td>
+        <td> {{this.type}}</td>
+        <td> {{this.price}}</td>
+        <td> {{this.color}} </td>
+        <td> {{this.ma}} </td>
+        <td> {{this.namekh}} </td>
+        <td>
+          <a type="button" class="btn btn-info"
+            href="/api/product_update/{{this._id}}"> Update </a>
+
+    <a type="button"class="btn btn-danger"
+     href="/api/product_delete/{{this._id}}"  onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?')">XOA</a>
+         
+        </td>
+      </tr>
+      <!-- The Modal -->
+     
+      {{/each}}
+    </tbody>
+  </table>
+
+</div>

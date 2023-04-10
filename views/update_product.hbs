@@ -1,0 +1,56 @@
+<div class="card col-md-6 container">
+        <div class="card-header text-center">
+          Update sản phẩm
+        </div>
+        <div class="card-body">
+          <form method="POST" action="/api/product_update">
+          <input type="hidden" name="id" value="{{sp._id}}">
+          <div class="row mb-3">
+            <a class="btn btn-dark col-auto me-auto" href="/api/products"><i class="fa-solid fa-arrow-left"></i>
+                Back</a>
+            <code class="mx-auto col-auto">{{notify}}</code>
+        </div>
+
+            <div class="form-group">
+              <label class="form-label">Tên sản phẩm</label>
+              <input type="text" class="form-control" name="name" value="{{sp.name}}" >
+            </div>
+            <div class="form-group">
+              <label class="form-label">Loại sản phẩm</label>
+              <select class="form-control" name="type" value="{{sp.type}}">
+                <option>Quần</option>
+                <option>Áo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Giá tiền</label>
+              <input type="number" class="form-control" name="price" value="{{sp.price}}" >
+            </div>
+            <div class="form-group">
+              
+          <label for="productType">Mau Sac</label>
+          <select class="form-control" name="color">
+            <option>xanh</option>
+            <option>do</option>
+            <option>tim</option>
+            <option>vang</option>
+          </select>
+        </div>
+         <div class="form-group">
+        <label for="productName">Mkh</label>
+        <input type="text" required class="form-control" name="ma"
+          placeholder="Nhập ma kh">
+      </div>
+       <div class="form-group">
+              <label for="productName">Tên kh</label>
+              <input type="text" required class="form-control" name="namekh" placeholder="Nhập tên kh ">
+            </div>
+
+            <hr>
+            <button type="submit" class="btn btn-primary">Update sản phẩm</button>
+          </form>
+        </div>
+      </div>
+
+
+      
